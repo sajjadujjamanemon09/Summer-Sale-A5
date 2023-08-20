@@ -703,10 +703,10 @@
                 <input
                   type="text"
                   placeholder="Coupon code"
-                  class="input input-bordered w-full pr-16"
+                  class="input input-bordered w-full pr-16" id="input-code"
                 />
                 <button
-                  class="btn btn-primary font-semibol border-0 text-white bg-pink-600 absolute top-0 right-0 rounded-l-none"
+                  class="btn btn-primary font-semibol border-0 text-white bg-pink-600 absolute top-0 right-0 rounded-l-none btn-apply" id="apply-btn" disabled
                 >
                   Apply
                 </button>
@@ -722,18 +722,18 @@
 
               <hr class="py-2" />
               <h2 class="font-medium text-2xl pb-2">
-                Total Price: <span class="font-normal" id="total-price">00</span>TK
+                Total Price: <span class="font-normal" id="total-price">00</span> TK
               </h2>
               <h2 class="font-medium text-2xl pb-2">
-                Discount: <span class="font-normal">00</span>TK
+                Discount: <span class="font-normal" id="discount">00</span> TK
               </h2>
               <h2 class="font-medium text-2xl pb-2">
-                Total: <span class="font-normal">00</span>TK
+                Total: <span class="font-normal" id="total">00</span> TK
               </h2>
               <hr class="py-2" />
               <div class="relative">
                 <button
-                  class="btn btn-primary font-semibol border-0 text-white bg-pink-600 absolute top-0 right-0 rounded-lg w-80 lg:w-64"
+                  class="btn btn-primary font-semibol border-0 text-white bg-pink-600 absolute top-0 right-0 rounded-lg w-80 lg:w-64 btn-make-purchase" id="purchase-btn" disabled
                 >
                   Make Purchase
                 </button>
