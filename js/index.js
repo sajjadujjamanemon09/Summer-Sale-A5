@@ -1,12 +1,14 @@
 let total = 0;
 let discountApplied = false;
+let itemCounter = 1;
 
 function handleClickBtn(target) {
   const selectedItemsContainer = document.getElementById("selected-items");
   const itemName = target.childNodes[3].childNodes[3].innerText;
-  const li = document.createElement("li");
-  li.innerText = itemName;
-  selectedItemsContainer.appendChild(li);
+  const ol = document.createElement("ol");
+  ol.innerText = `${itemCounter}. ${itemName}`;
+  selectedItemsContainer.appendChild(ol);
+  itemCounter++;
 
   const price = target.childNodes[3].childNodes[5].innerText.split(" ")[0];
 
