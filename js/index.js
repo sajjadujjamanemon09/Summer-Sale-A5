@@ -32,18 +32,20 @@ document.getElementById("apply-btn").addEventListener("click", function () {
 
   if (couponCode === "SELL200" && total >= 200) {
     const discountAmount = total * 0.2; // 20% discount
-    total -= discountAmount;
+    const originalTotal = total; // Store the original total
+
+    discount -= discountAmount;
 
     document.getElementById("discount").innerText = discountAmount.toFixed(2);
     document.getElementById("total-price").innerText = total.toFixed(2);
 
     discountApplied = true;
+
+    // Calculate 'total price' - 'discount' = 'Total'
+    const calculatedTotal = originalTotal - discountAmount;
+    document.getElementById("total").innerText = calculatedTotal.toFixed(2);
   } else {
-    alert("Invalid coupon code or Purchase upto 200TK");
+    alert("Invalid coupon code or Purchase up to 200TK");
     return;
   }
-
-  // Calculate 'total' - 'discount' and update 'total'
-const calculatedTotal = total - parseFloat(document.getElementById("discount").innerText);
-document.getElementById("total").innerText = calculatedTotal.toFixed(2);
 });
