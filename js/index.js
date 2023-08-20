@@ -13,6 +13,7 @@ function handleClickBtn(target) {
   total = parseInt(total) + parseInt(price);
 
   document.getElementById("total-price").innerText = total;
+  document.getElementById("total").innerText = total;
 
   if (total >= 200) {
     document.getElementById("apply-btn").removeAttribute("disabled");
@@ -46,6 +47,8 @@ document.getElementById("apply-btn").addEventListener("click", function () {
     document.getElementById("total").innerText = calculatedTotal.toFixed(2);
   } else {
     alert("Invalid coupon code or Purchase up to 200TK");
-    return;
   }
+});
+document.getElementById("home").addEventListener("click", function () {
+  window.location.href = "index.html";
 });
